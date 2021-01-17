@@ -9,7 +9,11 @@
 
 一、 可以透過下方指令建立所需的images。
 
-執行./build.sh，將會建立colabssh及colabnovnc兩個image。
+進入colab目錄中，並執行
+<pre>
+./build.sh
+</pre>
+將會建立colabssh及colabnovnc兩個image。
 
 二、使用以下指令啟動容器
 <pre>
