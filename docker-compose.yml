@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  colab:
+    image: colabssh
+    ports: 
+      - "8080"
+      - "6080"
+      - "2222"
+      - "22"
+    volumes:
+      - ./etc/config:/home/colab/.ssh/config
+      - ./authorized_keys:/home/colab/.ssh/authorized_keys
+
+  novnc:
+    image: colabnovnc
+    network_mode: service:colab
+    volumes:
+      - ./etc/ssl:/etc/ssl
+      #- ./etc/servers.conf:/etc/servers.conf
+    command: ["/root/websockify/websockify.py","--web=/usr/share/novnc/","--cert=/etc/ssl/fullchain.pem","--key=/etc/ssl/privkey.pem","6080","0.0.0.0:5901"]
