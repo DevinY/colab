@@ -33,7 +33,7 @@ docker-compose ps
 8080: code-server服務
 
 
-三、 到colab網站，選擇開啟筆記，再選到Github，輸入此repo的名稱。
+三、 到[colab](https://colab.research.google.com/)網站，選擇開啟筆記，再選到Github，輸入此repo的名稱。
 <pre>
 deviny/colab
 </pre>
