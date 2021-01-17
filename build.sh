@@ -8,7 +8,6 @@ fi
 touch authorized_keys
 cd osshd
 docker build \
---no-cache \
 --build-arg uid=$(id -u) \
 --build-arg gid=$(id -g) \
 --build-arg user=colab \
